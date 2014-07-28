@@ -1,0 +1,51 @@
+Cocos2d: 
+<dict>
+	cocos2d.x.version: quick-cocos2d-x 2.2.4
+	cocos2d.x.compiled_with_profiler: false
+	cocos2d.x.compiled_with_gl_state_cache: true
+	gl.vendor: Intel Inc.
+	gl.renderer: Intel HD Graphics 4000 OpenGL Engine
+	gl.version: 2.1 INTEL-8.26.34
+	gl.max_texture_size: 16384
+	gl.max_texture_units: 16
+	gl.supports_PVRTC: false
+	gl.supports_NPOT: true
+	gl.supports_BGRA8888: false
+	gl.supports_discard_framebuffer: false
+	gl.supports_vertex_array_object: true
+</dict>
+Cocos2d: lua_loadChunksFromZIP() - load zip file: /Users/cocos/dev/workspace/workdir/quick-x/lib/framework_precompiled/framework_precompiled.zip
+Cocos2d: lua_loadChunksFromZIP() - loaded chunks count: 108
+Cocos2d: ------------------------------------------------
+Cocos2d: LOAD LUA FILE: /Users/cocos/dev/workspace/workdir/quick-x/Brave/scripts/main.lua
+Cocos2d: ------------------------------------------------
+Cocos2d: [0.0310] [INFO] 
+Cocos2d: [0.0311] [INFO] # DEBUG                        = 1
+Cocos2d: [0.0311] [INFO] #
+Cocos2d: [0.0311] [INFO] # device.platform              = mac
+Cocos2d: [0.0311] [INFO] # device.model                 = unknown
+Cocos2d: [0.0312] [INFO] # device.language              = cn
+Cocos2d: [0.0312] [INFO] # device.writablePath          = /Users/cocos/dev/workspace/workdir/quick-x/Brave/
+Cocos2d: [0.0312] [INFO] # device.cachePath             = /Users/cocos/dev/workspace/workdir/quick-x/Brave/
+Cocos2d: [0.0312] [INFO] # device.directorySeparator    = /
+Cocos2d: [0.0312] [INFO] # device.pathSeparator         = :
+Cocos2d: [0.0312] [INFO] #
+Cocos2d: [0.0327] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+Cocos2d: [0.0327] [INFO] # CONFIG_SCREEN_WIDTH          = 1136.00
+Cocos2d: [0.0327] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+Cocos2d: [0.0327] [INFO] # display.widthInPixels        = 1136.00
+Cocos2d: [0.0327] [INFO] # display.heightInPixels       = 640.00
+Cocos2d: [0.0327] [INFO] # display.contentScaleFactor   = 1.00
+Cocos2d: [0.0328] [INFO] # display.width                = 1136.00
+Cocos2d: [0.0328] [INFO] # display.height               = 640.00
+Cocos2d: [0.0328] [INFO] # display.cx                   = 568.00
+Cocos2d: [0.0328] [INFO] # display.cy                   = 320.00
+Cocos2d: [0.0328] [INFO] # display.left                 = 0.00
+Cocos2d: [0.0328] [INFO] # display.right                = 1136.00
+Cocos2d: [0.0328] [INFO] # display.top                  = 640.00
+Cocos2d: [0.0328] [INFO] # display.bottom               = 0.00
+Cocos2d: [0.0328] [INFO] # display.c_left               = -568.00
+Cocos2d: [0.0328] [INFO] # display.c_right              = 568.00
+Cocos2d: [0.0328] [INFO] # display.c_top                = 320.00
+Cocos2d: [0.0330] [INFO] # display.c_bottom             = -320.00
+Cocos2d: [0.0330] [INFO] #
