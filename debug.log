@@ -19,33 +19,45 @@ Cocos2d: lua_loadChunksFromZIP() - loaded chunks count: 108
 Cocos2d: ------------------------------------------------
 Cocos2d: LOAD LUA FILE: /Users/cocos/dev/workspace/workdir/quick-x/Brave/scripts/main.lua
 Cocos2d: ------------------------------------------------
-Cocos2d: [0.0310] [INFO] 
-Cocos2d: [0.0311] [INFO] # DEBUG                        = 1
-Cocos2d: [0.0311] [INFO] #
-Cocos2d: [0.0311] [INFO] # device.platform              = mac
-Cocos2d: [0.0311] [INFO] # device.model                 = unknown
-Cocos2d: [0.0312] [INFO] # device.language              = cn
-Cocos2d: [0.0312] [INFO] # device.writablePath          = /Users/cocos/dev/workspace/workdir/quick-x/Brave/
-Cocos2d: [0.0312] [INFO] # device.cachePath             = /Users/cocos/dev/workspace/workdir/quick-x/Brave/
-Cocos2d: [0.0312] [INFO] # device.directorySeparator    = /
-Cocos2d: [0.0312] [INFO] # device.pathSeparator         = :
-Cocos2d: [0.0312] [INFO] #
-Cocos2d: [0.0327] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
-Cocos2d: [0.0327] [INFO] # CONFIG_SCREEN_WIDTH          = 1136.00
-Cocos2d: [0.0327] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
-Cocos2d: [0.0327] [INFO] # display.widthInPixels        = 1136.00
-Cocos2d: [0.0327] [INFO] # display.heightInPixels       = 640.00
-Cocos2d: [0.0327] [INFO] # display.contentScaleFactor   = 1.00
-Cocos2d: [0.0328] [INFO] # display.width                = 1136.00
-Cocos2d: [0.0328] [INFO] # display.height               = 640.00
-Cocos2d: [0.0328] [INFO] # display.cx                   = 568.00
-Cocos2d: [0.0328] [INFO] # display.cy                   = 320.00
-Cocos2d: [0.0328] [INFO] # display.left                 = 0.00
-Cocos2d: [0.0328] [INFO] # display.right                = 1136.00
-Cocos2d: [0.0328] [INFO] # display.top                  = 640.00
-Cocos2d: [0.0328] [INFO] # display.bottom               = 0.00
-Cocos2d: [0.0328] [INFO] # display.c_left               = -568.00
-Cocos2d: [0.0328] [INFO] # display.c_right              = 568.00
-Cocos2d: [0.0328] [INFO] # display.c_top                = 320.00
-Cocos2d: [0.0330] [INFO] # display.c_bottom             = -320.00
-Cocos2d: [0.0330] [INFO] #
+Cocos2d: [0.0228] [INFO] 
+Cocos2d: [0.0228] [INFO] # DEBUG                        = 1
+Cocos2d: [0.0228] [INFO] #
+Cocos2d: [0.0229] [INFO] # device.platform              = mac
+Cocos2d: [0.0229] [INFO] # device.model                 = unknown
+Cocos2d: [0.0229] [INFO] # device.language              = cn
+Cocos2d: [0.0229] [INFO] # device.writablePath          = /Users/cocos/dev/workspace/workdir/quick-x/Brave/
+Cocos2d: [0.0229] [INFO] # device.cachePath             = /Users/cocos/dev/workspace/workdir/quick-x/Brave/
+Cocos2d: [0.0229] [INFO] # device.directorySeparator    = /
+Cocos2d: [0.0229] [INFO] # device.pathSeparator         = :
+Cocos2d: [0.0229] [INFO] #
+Cocos2d: [0.0253] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+Cocos2d: [0.0253] [INFO] # CONFIG_SCREEN_WIDTH          = 1136.00
+Cocos2d: [0.0253] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+Cocos2d: [0.0253] [INFO] # display.widthInPixels        = 1136.00
+Cocos2d: [0.0254] [INFO] # display.heightInPixels       = 640.00
+Cocos2d: [0.0254] [INFO] # display.contentScaleFactor   = 1.00
+Cocos2d: [0.0254] [INFO] # display.width                = 1136.00
+Cocos2d: [0.0254] [INFO] # display.height               = 640.00
+Cocos2d: [0.0254] [INFO] # display.cx                   = 568.00
+Cocos2d: [0.0254] [INFO] # display.cy                   = 320.00
+Cocos2d: [0.0254] [INFO] # display.left                 = 0.00
+Cocos2d: [0.0254] [INFO] # display.right                = 1136.00
+Cocos2d: [0.0254] [INFO] # display.top                  = 640.00
+Cocos2d: [0.0254] [INFO] # display.bottom               = 0.00
+Cocos2d: [0.0254] [INFO] # display.c_left               = -568.00
+Cocos2d: [0.0254] [INFO] # display.c_right              = 568.00
+Cocos2d: [0.0254] [INFO] # display.c_top                = 320.00
+Cocos2d: [0.0254] [INFO] # display.c_bottom             = -320.00
+Cocos2d: [0.0254] [INFO] #
+Cocos2d: [0.1804] idle
+Cocos2d: [1.5075] move
+Cocos2d: [2.0737] attack
+Cocos2d: [2.7554] dead
+Cocos2d: [5.8314] table: 0x106dc058 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from dead to dead
+Cocos2d: [5.8314] [ERR] event stop inappropriate in current state dead
+Cocos2d: [5.8314] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "/Users/cocos/dev/workspace/workdir/quick-x/Brave/scripts/app/roles/Player.lua"]:61: in function 'doEvent'
+	[string "/Users/cocos/dev/workspace/workdir/quick-x/Brave/scripts/app/scenes/MainScene.lua"]:28: in function <[string "/Users/cocos/dev/workspace/workdir/quick-x/Brave/scripts/app/scenes/MainScene.lua"]:23>

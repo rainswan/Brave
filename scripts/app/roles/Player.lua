@@ -7,6 +7,7 @@ end)
 function Player:ctor()
     -- 缓存动画数据
     self:addAnimation()
+    self:addStateMachine()
 end
 function Player:addUI()
 --    self.mBlood =
@@ -47,12 +48,19 @@ function Player:walkTo(pos, callback)
 end
 
 function Player:attack()
-    transition.playAnimationOnce(self, display.getAnimationCache("player1-attack"))
+    local animation = display.getAnimationCache("player1-attack")
+    animation:setRestoreOriginalFrame(true)
+    transition.playAnimationOnce(self, animation)
 end
 
 function Player:dead()
     transition.playAnimationOnce(self, display.getAnimationCache("player1-dead"))
 end
+
+function Player:doEvent(event)
+    self.fsm_:doEvent(event)
+end
+
 
 function Player:addStateMachine()
     self.fsm_ = {}
@@ -61,49 +69,29 @@ function Player:addStateMachine()
     :exportMethods()
 
     self.fsm_:setupState({
+        -- 初始状态
+        initial = "idle",
+
+        -- 事件和状态转换
         events = {
-            {name = "idle", from = "*",   to = "idle" },
-            {name = "move",  from = "idle",  to = "move"},
-            {name = "attack", from = {"idle", "move", "hit"},  to = "attack"   },
-            {name = "hit", from = "idle", to = "hit"   },
-            {name = "dead",  from = "hit",    to = "dead"},
+            -- t1:clickScreen; t2:clickEnemy; t3:beKilled; t4:stop
+            {name = "clickScreen", from = {"idle", "walk", "attack"},   to = "walk" },
+            {name = "clickEnemy",  from = {"idle", "walk"},  to = "attack"},
+            {name = "beKilled", from = {"idle", "walk", "attack"},  to = "dead"},
+            {name = "stop", from = {"idle", "walk", "attack"}, to = "idle"},
         },
 
+        -- 状态转变后的回调
         callbacks = {
-            onbeforestart = function(event) self:log("[FSM] STARTING UP") end,
-            onstart       = function(event) self:log("[FSM] READY") end,
-            onbeforewarn  = function(event) self:log("[FSM] START   EVENT: warn!", true) end,
-            onbeforepanic = function(event) self:log("[FSM] START   EVENT: panic!", true) end,
-            onbeforecalm  = function(event) self:log("[FSM] START   EVENT: calm!",  true) end,
-            onbeforeclear = function(event) self:log("[FSM] START   EVENT: clear!", true) end,
-            onwarn        = function(event) self:log("[FSM] FINISH  EVENT: warn!") end,
-            onpanic       = function(event) self:log("[FSM] FINISH  EVENT: panic!") end,
-            oncalm        = function(event) self:log("[FSM] FINISH  EVENT: calm!") end,
-            onclear       = function(event) self:log("[FSM] FINISH  EVENT: clear!") end,
-            onleavegreen  = function(event) self:log("[FSM] LEAVE   STATE: green") end,
-            onleaveyellow = function(event) self:log("[FSM] LEAVE   STATE: yellow") end,
-            onleavered    = function(event)
-                self:log("[FSM] LEAVE   STATE: red")
-                self:pending(event, 3)
-                self:performWithDelay(function()
-                    self:pending(event, 2)
-                    self:performWithDelay(function()
-                        self:pending(event, 1)
-                        self:performWithDelay(function()
-                            self.pendingLabel_:setString("")
-                            event.transition()
-                        end, 1)
-                    end, 1)
-                end, 1)
-                return "async"
-            end,
-            ongreen       = function(event) self:log("[FSM] ENTER   STATE: green") end,
-            onyellow      = function(event) self:log("[FSM] ENTER   STATE: yellow") end,
-            onred         = function(event) self:log("[FSM] ENTER   STATE: red") end,
-            onchangestate = function(event) self:log("[FSM] CHANGED STATE: " .. event.from .. " to " .. event.to) end,
+            onidle = function () print("idle") end,
+            onwalk = function () print("move") end,
+            onattack = function () print("attack") end,
+            ondead = function () print("dead") end
         },
     })
+
 end
+
 
 return Player
 

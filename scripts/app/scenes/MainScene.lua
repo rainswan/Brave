@@ -22,7 +22,11 @@ end
 function MainScene:addTouchLayer()
     local function onTouch(eventName, x, y)
         if eventName == "began" then
-            self.player:walkTo({x=x,y=y})
+--            self.player:walkTo({x=x,y=y})
+            index = index or 1  -- 取事件字符串的索引
+            local fsmEvents = {"clickScreen", "clickEnemy", "beKilled", "stop"}
+            self.player:doEvent(fsmEvents[index])
+            index = index + 1
         end
     end
 
