@@ -17,16 +17,18 @@ function MainScene:initScene()
     self:addTouchLayer()
     self:addRoles()
     self:addUI()
+
+    CCNotificationCenter:sharedNotificationCenter():registerScriptObserver(nil, function(_, enemy) self:clickEnemy(enemy) end, "CLICK_ENEMY")
 end
 
 function MainScene:addTouchLayer()
     local function onTouch(eventName, x, y)
+        print("move")
         if eventName == "began" then
---            self.player:walkTo({x=x,y=y})
-            index = index or 1  -- 取事件字符串的索引
-            local fsmEvents = {"clickScreen", "clickEnemy", "beKilled", "stop"}
-            self.player:doEvent(fsmEvents[index])
-            index = index + 1
+            self.player:walkTo({x=x, y=y})
+            if self.player:getState() ~= 'walk' then
+                self.player:doEvent("clickScreen")
+            end
         end
     end
 
@@ -65,6 +67,7 @@ function MainScene:addRoles()
 end
 
 function MainScene:addUI()
+
     -- 血量
     self.progress = Progress.new()
     self.progress:setPosition(display.left + self.progress:getContentSize().width/2, display.top - self.progress:getContentSize().height/2)
@@ -83,9 +86,13 @@ end
 
 function MainScene:pause()
     display.pause()
+end
 
---    -- 显示暂停界面
---    self.pauseLayer =
+function MainScene:clickEnemy(enemy)
+    print("clickEnemy")
+    if self.player:getState() ~= "attack" then
+        self.player:doEvent("clickEnemy")
+    end
 end
 
 function MainScene:clickSkill()

@@ -24,10 +24,14 @@ function Player:addAnimation()
     end
 end
 
+function Player:idle()
+    transition.stopTarget(self)
+end
+
 function Player:walkTo(pos, callback)
 
     local function moveStop()
-        transition.stopTarget(self)
+        self:doEvent("stop")
         if callback then
             callback()
         end
@@ -40,6 +44,14 @@ function Player:walkTo(pos, callback)
 
     local currentPos = CCPoint(self:getPosition())
     local destPos = CCPoint(pos.x, pos.y)
+
+    -- 感谢lcf8858同学的建议
+    if pos.x < currentPos.x then
+        self:setFlipX(true)
+    else
+        self:setFlipX(false)
+    end
+
     local posDiff = cc.PointDistance(currentPos, destPos)
     self.moveAction = transition.sequence({CCMoveTo:create(5 * posDiff / display.width, CCPoint(pos.x,pos.y)), CCCallFunc:create(moveStop)})
     transition.playAnimationForever(self, display.getAnimationCache("player1-walk"))
@@ -48,7 +60,18 @@ function Player:walkTo(pos, callback)
 end
 
 function Player:attack()
+
+    local function attackEnd()
+        self:doEvent("stop")
+    end
+
     local animation = display.getAnimationCache("player1-attack")
+    animation:setRestoreOriginalFrame(true)
+    transition.playAnimationOnce(self, animation, false, attackEnd)
+end
+
+function Player:hit()
+    local animation = display.getAnimationCache("player1-hit")
     animation:setRestoreOriginalFrame(true)
     transition.playAnimationOnce(self, animation)
 end
@@ -57,10 +80,13 @@ function Player:dead()
     transition.playAnimationOnce(self, display.getAnimationCache("player1-dead"))
 end
 
-function Player:doEvent(event)
-    self.fsm_:doEvent(event)
+function Player:doEvent(event, ...)
+    self.fsm_:doEvent(event, ...)
 end
 
+function Player:getState()
+    return self.fsm_:getState()
+end
 
 function Player:addStateMachine()
     self.fsm_ = {}
@@ -75,23 +101,22 @@ function Player:addStateMachine()
         -- 事件和状态转换
         events = {
             -- t1:clickScreen; t2:clickEnemy; t3:beKilled; t4:stop
-            {name = "clickScreen", from = {"idle", "walk", "attack"},   to = "walk" },
+            {name = "clickScreen", from = {"idle", "attack"},   to = "walk" },
             {name = "clickEnemy",  from = {"idle", "walk"},  to = "attack"},
             {name = "beKilled", from = {"idle", "walk", "attack"},  to = "dead"},
-            {name = "stop", from = {"idle", "walk", "attack"}, to = "idle"},
+            {name = "stop", from = {"walk", "attack"}, to = "idle"},
         },
 
         -- 状态转变后的回调
         callbacks = {
-            onidle = function () print("idle") end,
-            onwalk = function () print("move") end,
-            onattack = function () print("attack") end,
-            ondead = function () print("dead") end
+            onidle = function (event) self:idle() end,
+            onwalk = function (event)  end,
+            onattack = function (event) self:attack()  end,
+            ondead = function (event) self:dead() end
         },
     })
 
 end
-
 
 return Player
 

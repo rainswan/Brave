@@ -5,16 +5,17 @@ end)
 
 function Enemy1:ctor()
     function onTouch()
-
+        CCNotificationCenter:sharedNotificationCenter():postNotification("CLICK_ENEMY", self)
+        return true
     end
+    self.attack = 20
     self:addAnimation()
     self.isAttack = false
     self:setTouchEnabled(true)
-    self:setTouchSwallowEnabled(false)
+    self:setTouchSwallowEnabled(true)
     self:addNodeEventListener(cc.NODE_TOUCH_EVENT, function(event)
         return onTouch()
     end)
-
 end
 
 function Enemy1:addAnimation()

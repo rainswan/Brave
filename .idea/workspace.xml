@@ -64,28 +64,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainScene.lua" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainScene.lua" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="613" selection-end="817" vertical-scroll-proportion="0.23245615" vertical-offset="288" max-vertical-offset="2140">
+            <state line="87" column="19" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2280">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Background.lua" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/ui/Background.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="7" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1000">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.lua" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Player.lua" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="40" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.0" vertical-offset="808" max-vertical-offset="2060">
+            <state line="116" column="6" selection-start="3236" selection-end="3236" vertical-scroll-proportion="2.1444201" vertical-offset="0" max-vertical-offset="2200">
+              <folding>
+                <element signature="e#32#121#0" expanded="false" />
+                <element signature="n#Player:ctor#0" expanded="false" />
+                <element signature="n#Player:addUI#0" expanded="false" />
+                <element signature="n#Player:addAnimation#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transition.lua" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../framework/transition.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="455" column="75" selection-start="11313" selection-end="11331" vertical-scroll-proportion="0.0" vertical-offset="8756" max-vertical-offset="11980">
               <folding />
             </state>
           </provider>
@@ -94,7 +99,7 @@
       <file leaf-file-name="Enemy1.lua" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="8" selection-start="710" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="920">
+            <state line="36" column="24" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
               <folding />
             </state>
           </provider>
@@ -113,8 +118,8 @@
         <option value="$PROJECT_DIR$/../framework/transition.lua" />
         <option value="$PROJECT_DIR$/../../lua_complete_intellij/quick-lua/transition.lua" />
         <option value="$PROJECT_DIR$/scripts/app/ui/Background.lua" />
-        <option value="$PROJECT_DIR$/scripts/app/roles/Enemy1.lua" />
         <option value="$PROJECT_DIR$/../framework/cc/components/behavior/StateMachine.lua" />
+        <option value="$PROJECT_DIR$/scripts/app/roles/Enemy1.lua" />
         <option value="$PROJECT_DIR$/scripts/app/scenes/MainScene.lua" />
         <option value="$PROJECT_DIR$/scripts/app/roles/Player.lua" />
       </list>
@@ -539,11 +544,13 @@
       <workItem from="1406024129927" duration="595000" />
       <workItem from="1406079768564" duration="24741000" />
       <workItem from="1406520145369" duration="20964000" />
+      <workItem from="1406796088546" duration="4180000" />
+      <workItem from="1406858127230" duration="9408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66433000" />
+    <option name="totallyTimeSpent" value="80021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="22" width="1864" height="1058" extended-state="6" />
@@ -630,6 +637,72 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="10" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/ui/Background.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="7" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="1000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="66" selection-start="2263" selection-end="2269" vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="2060">
+          <folding>
+            <element signature="e#32#121#0" expanded="false" />
+            <element signature="n#Player:ctor#0" expanded="false" />
+            <element signature="n#Player:addUI#0" expanded="false" />
+            <element signature="n#Player:addAnimation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="613" selection-end="817" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="2140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/ui/Background.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="7" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="1000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="40" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.0" vertical-offset="808" max-vertical-offset="2060">
+          <folding>
+            <element signature="e#32#121#0" expanded="false" />
+            <element signature="n#Player:ctor#0" expanded="false" />
+            <element signature="n#Player:addUI#0" expanded="false" />
+            <element signature="n#Player:addAnimation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="710" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="2060">
           <folding />
         </state>
@@ -645,7 +718,12 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="12" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="926" max-vertical-offset="2300">
-          <folding />
+          <folding>
+            <element signature="e#32#121#0" expanded="false" />
+            <element signature="n#Player:ctor#0" expanded="false" />
+            <element signature="n#Player:addUI#0" expanded="false" />
+            <element signature="n#Player:addAnimation#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -680,7 +758,12 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="23" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="1200">
-          <folding />
+          <folding>
+            <element signature="e#32#121#0" expanded="false" />
+            <element signature="n#Player:ctor#0" expanded="false" />
+            <element signature="n#Player:addUI#0" expanded="false" />
+            <element signature="n#Player:addAnimation#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -701,7 +784,12 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="23" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1200">
-          <folding />
+          <folding>
+            <element signature="e#32#121#0" expanded="false" />
+            <element signature="n#Player:ctor#0" expanded="false" />
+            <element signature="n#Player:addUI#0" expanded="false" />
+            <element signature="n#Player:addAnimation#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -722,7 +810,12 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="23" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1200">
-          <folding />
+          <folding>
+            <element signature="e#32#121#0" expanded="false" />
+            <element signature="n#Player:ctor#0" expanded="false" />
+            <element signature="n#Player:addUI#0" expanded="false" />
+            <element signature="n#Player:addAnimation#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -803,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../framework/transition.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="26" selection-start="6162" selection-end="6162" vertical-scroll-proportion="0.3107221" vertical-offset="4096" max-vertical-offset="11980">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lua_complete_intellij/quick-lua/transition.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="29" selection-start="315" selection-end="335" vertical-scroll-proportion="0.443038" vertical-offset="0" max-vertical-offset="632">
@@ -817,38 +903,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
+    <entry file="file://$PROJECT_DIR$/scripts/app/ui/Background.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="710" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="920">
+        <state line="18" column="0" selection-start="541" selection-end="541" vertical-scroll-proportion="0.3938731" vertical-offset="0" max-vertical-offset="1000">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../framework/cc/components/behavior/StateMachine.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="23" selection-start="1510" selection-end="1517" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="6520">
+        <state line="80" column="3" selection-start="2381" selection-end="2381" vertical-scroll-proportion="0.39606127" vertical-offset="1238" max-vertical-offset="6520">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/ui/Background.lua">
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="40" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.0" vertical-offset="808" max-vertical-offset="2060">
+        <state line="36" column="24" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="940">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="613" selection-end="817" vertical-scroll-proportion="0.23245615" vertical-offset="288" max-vertical-offset="2140">
+        <state line="87" column="19" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2280">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../framework/transition.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="455" column="75" selection-start="11313" selection-end="11331" vertical-scroll-proportion="0.0" vertical-offset="8756" max-vertical-offset="11980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="6" selection-start="3236" selection-end="3236" vertical-scroll-proportion="2.1444201" vertical-offset="0" max-vertical-offset="2200">
+          <folding>
+            <element signature="e#32#121#0" expanded="false" />
+            <element signature="n#Player:ctor#0" expanded="false" />
+            <element signature="n#Player:addUI#0" expanded="false" />
+            <element signature="n#Player:addAnimation#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
