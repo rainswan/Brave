@@ -8,7 +8,6 @@ function Enemy1:ctor()
         CCNotificationCenter:sharedNotificationCenter():postNotification("CLICK_ENEMY", self)
         return true
     end
-    self.attack = 20
     self:addAnimation()
     self.isAttack = false
     self:setTouchEnabled(true)
