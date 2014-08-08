@@ -1,3 +1,4 @@
+local Progress = import("..ui.Progress")
 
 local Enemy2 = class("Enemy2", function()
     return display.newSprite("#enemy2-1-1.png")
@@ -15,6 +16,15 @@ function Enemy2:ctor()
     self:addNodeEventListener(cc.NODE_TOUCH_EVENT, function(event)
         return onTouch()
     end)
+
+    self:addUI()
+end
+
+function Enemy2:addUI()
+    self.progress = Progress.new("#small-enemy-progress-bg.png", "#small-enemy-progress-fill.png")
+    local size = self:getContentSize()
+    self.progress:setPosition(size.width*2/3, size.height + self.progress:getContentSize().height/2)
+    self:addChild(self.progress)
 end
 
 function Enemy2:addAnimation()

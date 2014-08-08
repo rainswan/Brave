@@ -67,7 +67,25 @@
       <file leaf-file-name="MainScene.lua" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="19" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2280">
+            <state line="72" column="48" selection-start="2240" selection-end="2240" vertical-scroll-proportion="0.0" vertical-offset="1328" max-vertical-offset="2240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Progress.lua" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/ui/Progress.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="3" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PauseLayer.lua" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/app/scenes/PauseLayer.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="17" selection-start="182" selection-end="1454" vertical-scroll-proportion="0.8464912" vertical-offset="488" max-vertical-offset="1400">
               <folding />
             </state>
           </provider>
@@ -76,13 +94,8 @@
       <file leaf-file-name="Player.lua" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="26" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2200">
-              <folding>
-                <element signature="e#32#121#0" expanded="false" />
-                <element signature="n#Player:ctor#0" expanded="false" />
-                <element signature="n#Player:addUI#0" expanded="false" />
-                <element signature="n#Player:addAnimation#0" expanded="false" />
-              </folding>
+            <state line="53" column="0" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="2560">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,16 +103,16 @@
       <file leaf-file-name="Enemy1.lua" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="920">
+            <state line="22" column="23" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1120">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Enemy2.lua" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Enemy2.lua" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy2.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.34354487" vertical-offset="6" max-vertical-offset="920">
+            <state line="50" column="0" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0" vertical-offset="1000" max-vertical-offset="1120">
               <folding />
             </state>
           </provider>
@@ -119,10 +132,12 @@
         <option value="$PROJECT_DIR$/../../lua_complete_intellij/quick-lua/transition.lua" />
         <option value="$PROJECT_DIR$/scripts/app/ui/Background.lua" />
         <option value="$PROJECT_DIR$/../framework/cc/components/behavior/StateMachine.lua" />
-        <option value="$PROJECT_DIR$/scripts/app/scenes/MainScene.lua" />
         <option value="$PROJECT_DIR$/scripts/app/roles/Player.lua" />
         <option value="$PROJECT_DIR$/scripts/app/roles/Enemy1.lua" />
         <option value="$PROJECT_DIR$/scripts/app/roles/Enemy2.lua" />
+        <option value="$PROJECT_DIR$/scripts/app/ui/Progress.lua" />
+        <option value="$PROJECT_DIR$/scripts/app/scenes/PauseLayer.lua" />
+        <option value="$PROJECT_DIR$/scripts/app/scenes/MainScene.lua" />
       </list>
     </option>
   </component>
@@ -225,24 +240,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scenes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Brave" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,12 +519,14 @@
       <workItem from="1406079768564" duration="24741000" />
       <workItem from="1406520145369" duration="20964000" />
       <workItem from="1406796088546" duration="4180000" />
-      <workItem from="1406858127230" duration="10138000" />
+      <workItem from="1406858127230" duration="14395000" />
+      <workItem from="1407116810355" duration="11036000" />
+      <workItem from="1407379299605" duration="7516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80751000" />
+    <option name="totallyTimeSpent" value="103560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="22" width="1864" height="1058" extended-state="6" />
@@ -535,50 +534,50 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="ImagePreview&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Particles&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17727771" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18441273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Animations&#9;" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="ImagePreview&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Particles&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17727771" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Animations&#9;" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18441273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Animations&#9;" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -589,8 +588,8 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -612,6 +611,41 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/scripts/app/scenes/PauseLayer.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="65" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="220">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../framework/display.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="414" column="0" selection-start="12494" selection-end="12494" vertical-scroll-proportion="0.0" vertical-offset="7936" max-vertical-offset="26520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="13" selection-start="3256" selection-end="3256" vertical-scroll-proportion="0.0" vertical-offset="2400" max-vertical-offset="2560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="21" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy2.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0" vertical-offset="1000" max-vertical-offset="1120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="10" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="2040">
@@ -629,12 +663,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="66" selection-start="2263" selection-end="2269" vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="2060">
-          <folding>
-            <element signature="e#32#121#0" expanded="false" />
-            <element signature="n#Player:ctor#0" expanded="false" />
-            <element signature="n#Player:addUI#0" expanded="false" />
-            <element signature="n#Player:addAnimation#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -662,12 +691,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="40" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.0" vertical-offset="808" max-vertical-offset="2060">
-          <folding>
-            <element signature="e#32#121#0" expanded="false" />
-            <element signature="n#Player:ctor#0" expanded="false" />
-            <element signature="n#Player:addUI#0" expanded="false" />
-            <element signature="n#Player:addAnimation#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -695,12 +719,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="12" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="926" max-vertical-offset="2300">
-          <folding>
-            <element signature="e#32#121#0" expanded="false" />
-            <element signature="n#Player:ctor#0" expanded="false" />
-            <element signature="n#Player:addUI#0" expanded="false" />
-            <element signature="n#Player:addAnimation#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -735,12 +754,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="23" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="1200">
-          <folding>
-            <element signature="e#32#121#0" expanded="false" />
-            <element signature="n#Player:ctor#0" expanded="false" />
-            <element signature="n#Player:addUI#0" expanded="false" />
-            <element signature="n#Player:addAnimation#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -761,12 +775,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="23" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1200">
-          <folding>
-            <element signature="e#32#121#0" expanded="false" />
-            <element signature="n#Player:ctor#0" expanded="false" />
-            <element signature="n#Player:addUI#0" expanded="false" />
-            <element signature="n#Player:addAnimation#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -787,12 +796,7 @@
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="23" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1200">
-          <folding>
-            <element signature="e#32#121#0" expanded="false" />
-            <element signature="n#Player:ctor#0" expanded="false" />
-            <element signature="n#Player:addUI#0" expanded="false" />
-            <element signature="n#Player:addAnimation#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -894,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="19" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="2280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../framework/transition.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state line="454" column="2" selection-start="11255" selection-end="11255" vertical-scroll-proportion="-2.1728666" vertical-offset="11066" max-vertical-offset="11980">
@@ -908,28 +905,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
+    <entry file="file://$PROJECT_DIR$/../framework/ui.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="26" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2200">
-          <folding>
-            <element signature="e#32#121#0" expanded="false" />
-            <element signature="n#Player:ctor#0" expanded="false" />
-            <element signature="n#Player:addUI#0" expanded="false" />
-            <element signature="n#Player:addAnimation#0" expanded="false" />
-          </folding>
+        <state line="456" column="0" selection-start="11115" selection-end="11115" vertical-scroll-proportion="10.0" vertical-offset="0" max-vertical-offset="11660">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
+    <entry file="file://$PROJECT_DIR$/../framework/display.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="920">
+        <state line="133" column="30" selection-start="4253" selection-end="4253" vertical-scroll-proportion="0.0" vertical-offset="2196" max-vertical-offset="26520">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy2.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.34354487" vertical-offset="6" max-vertical-offset="920">
+        <state line="50" column="0" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../framework/scheduler.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="6" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.40789473" vertical-offset="1148" max-vertical-offset="2340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Player.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="2560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/roles/Enemy1.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="23" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/ui/Progress.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="3" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/scenes/MainScene.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="48" selection-start="2240" selection-end="2240" vertical-scroll-proportion="0.0" vertical-offset="1328" max-vertical-offset="2240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/scenes/PauseLayer.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="17" selection-start="182" selection-end="1454" vertical-scroll-proportion="0.8464912" vertical-offset="488" max-vertical-offset="1400">
           <folding />
         </state>
       </provider>

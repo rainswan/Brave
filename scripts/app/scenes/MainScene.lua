@@ -4,6 +4,7 @@ local Enemy1 = import("..roles.Enemy1")
 local Enemy2 = import("..roles.Enemy2")
 local Progress = import("..ui.Progress")
 local Background = import("..ui.Background")
+local PauseLayer = import("..scenes.PauseLayer")
 
 local MainScene = class("MainScene", function()
     return display.newScene("MainScene")
@@ -23,7 +24,6 @@ end
 
 function MainScene:addTouchLayer()
     local function onTouch(eventName, x, y)
-        print("move")
         if eventName == "began" then
             self.player:walkTo({x=x, y=y})
             if self.player:getState() ~= 'walk' then
@@ -69,27 +69,25 @@ end
 function MainScene:addUI()
 
     -- 血量
-    self.progress = Progress.new()
+    self.progress = Progress.new("#player-progress-bg.png", "#player-progress-fill.png")
     self.progress:setPosition(display.left + self.progress:getContentSize().width/2, display.top - self.progress:getContentSize().height/2)
     self:addChild(self.progress)
 
     local itemPause = ui.newImageMenuItem({image="#pause1.png", imageSelected="#pause2.png",
         tag=1, listener = function(tag) self:pause() end})
-    local itemSkill = ui.newImageMenuItem({image="#skill1.png", imageSelected="#skill2.png",
-        tag=2, listener = function(tag) self:clickSkill() end})
-    local menu = ui.newMenu({itemPause, itemSkill})
+    local menu = ui.newMenu({itemPause})
     itemPause:setPosition(display.right-itemPause:getContentSize().width/2, display.top-itemPause:getContentSize().height/2)
-    itemSkill:setPosition(display.left + itemSkill:getContentSize().width/2, display.bottom + itemSkill:getContentSize().height/2)
     menu:setPosition(0,0)
     self:addChild(menu)
 end
 
 function MainScene:pause()
     display.pause()
+    local layer = PauseLayer.new()
+    self:addChild(layer)
 end
 
 function MainScene:clickEnemy(enemy)
-    print("clickEnemy")
     if self.player:getState() ~= "attack" then
         self.player:doEvent("clickEnemy")
     end
