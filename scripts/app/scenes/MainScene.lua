@@ -5,6 +5,7 @@ local Enemy2 = import("..roles.Enemy2")
 local Progress = import("..ui.Progress")
 local Background = import("..ui.Background")
 local PauseLayer = import("..scenes.PauseLayer")
+local PhysicsManager = import("..scenes.PhysicsManager")
 
 local MainScene = class("MainScene", function()
     return display.newScene("MainScene")
@@ -16,8 +17,8 @@ end
 
 function MainScene:initScene()
     self:addTouchLayer()
-    self:addRoles()
     self:addUI()
+    self:addRoles()
 
     CCNotificationCenter:sharedNotificationCenter():registerScriptObserver(nil, function(_, enemy) self:clickEnemy(enemy) end, "CLICK_ENEMY")
 end
@@ -44,6 +45,11 @@ end
 
 function MainScene:addRoles()
 
+    local world = PhysicsManager:getInstance()
+    self:addChild(world)
+
+    world:start()
+
     -- 背景
     self.background = Background.new()-- display.newSprite("image/background.png", display.cx, display.cy)
     self.background:setPosition(0, 0)
@@ -52,18 +58,48 @@ function MainScene:addRoles()
     -- 玩家
     self.player = Player.new()
     self.player:setPosition(display.left + self.player:getContentSize().width/2, display.cy)
+    self.player.body:setPosition(display.left + self.player:getContentSize().width/2, display.cy)
     self:addChild(self.player)
 
     -- 敌人1
     self.enemy1 = Enemy1.new()
     self.enemy1:setPosition(display.right - self.enemy1:getContentSize().width/2, display.cy)
+    self.enemy1.body:setPosition(display.right - self.enemy1:getContentSize().width/2, display.cy)
     self:addChild(self.enemy1)
 
     -- 敌人2
     self.enemy2 = Enemy2.new()
     self.enemy2:setPosition(display.right - self.enemy2:getContentSize().width/2 * 3, display.cy)
+    self.enemy2.body:setPosition(display.right - self.enemy2:getContentSize().width/2 * 3, display.cy)
     self:addChild(self.enemy2)
 
+    self.worldDebug = world:createDebugNode()
+    self:addChild(self.worldDebug)
+    world:addCollisionScriptListener(handler(self, self.onCollision) ,
+        CollisionType.kCollisionTypePlayer, CollisionType.kCollisionTypeEnemy)
+end
+
+function MainScene:onCollision(eventType, event)
+    print(eventType)
+    if eventType == 'begin' then
+        self.canAttack = true
+        local body1 = event:getBody1()
+        local body2 = event:getBody2()
+
+        if body1:getCollisionType() == CollisionType.kCollisionTypePlayer and body2 then
+            print("body2 onCollision begin")
+            body2.isCanAttack = true
+        end
+    elseif eventType == 'separate' then
+        self.canAttack = false
+        local body1 = event:getBody1()
+        local body2 = event:getBody2()
+
+        if body1:getCollisionType() == CollisionType.kCollisionTypePlayer and body2 then
+            print("body2 onCollision sepeat")
+            body2.isCanAttack = false
+        end
+    end
 end
 
 function MainScene:addUI()
@@ -71,7 +107,7 @@ function MainScene:addUI()
     -- 血量
     self.progress = Progress.new("#player-progress-bg.png", "#player-progress-fill.png")
     self.progress:setPosition(display.left + self.progress:getContentSize().width/2, display.top - self.progress:getContentSize().height/2)
-    self:addChild(self.progress)
+    self:addChild(self.progress, 10)
 
     local itemPause = ui.newImageMenuItem({image="#pause1.png", imageSelected="#pause2.png",
         tag=1, listener = function(tag) self:pause() end})
@@ -88,19 +124,31 @@ function MainScene:pause()
 end
 
 function MainScene:clickEnemy(enemy)
-    if self.player:getState() ~= "attack" then
-        self.player:doEvent("clickEnemy")
+    if self.canAttack then
+        if self.player:getState() ~= "attack" then
+            self.player:doEvent("clickEnemy")
+            print("enemy:canAttack " .. tostring(enemy:getCanAttack()))
+            if enemy:getCanAttack() and enemy:getState() ~= 'hit' then
+                enemy:doEvent("beHit", {attack = self.player.attack})
+            end
+        end
+    else
+        local x,y = self.player:getPosition()
+        self.player:walkTo({x=x, y=y})
+        if self.player:getState() ~= 'walk' then
+            self.player:doEvent("clickScreen")
+        end
     end
-end
-
-function MainScene:clickSkill()
-
 end
 
 function MainScene:onEnter()
 end
 
 function MainScene:onExit()
+    local world = PhysicsManager:getInstance()
+    world:removeAllCollisionListeners()
+    world:removeAllBodies(true)
+    CCNotificationCenter:sharedNotificationCenter():unregisterScriptObserver(nil, "CLICK_ENEMY")
 end
 
 return MainScene

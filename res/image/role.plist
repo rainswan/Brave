@@ -420,6 +420,19 @@
                 <key>sourceSize</key>
                 <string>{308,153}</string>
             </dict>
+            <key>enemy2-4-1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{852,1259},{136,145}}</string>
+                <key>offset</key>
+                <string>{49,4}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{135,0},{136,145}}</string>
+                <key>sourceSize</key>
+                <string>{308,153}</string>
+            </dict>
             <key>enemy2-4-2.png</key>
             <dict>
                 <key>frame</key>
@@ -430,19 +443,6 @@
                 <true/>
                 <key>sourceColorRect</key>
                 <string>{{134,0},{134,145}}</string>
-                <key>sourceSize</key>
-                <string>{308,153}</string>
-            </dict>
-            <key>penemy2-4-1.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{852,1259},{136,145}}</string>
-                <key>offset</key>
-                <string>{49,4}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{135,0},{136,145}}</string>
                 <key>sourceSize</key>
                 <string>{308,153}</string>
             </dict>
@@ -690,7 +690,7 @@
             <key>size</key>
             <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:5f6444afab05f331b3460e15d8b63425:28e2ca57f1e75eaabc7fc7a8c1c6dd4e:c7f724d6c30314d5f0ba98940d931d6f$</string>
+            <string>$TexturePacker:SmartUpdate:b0c59eee3b921578759b7d01d7afd876:77c61d33913491e84839d71b585346a0:c7f724d6c30314d5f0ba98940d931d6f$</string>
             <key>textureFileName</key>
             <string>role.pvr.ccz</string>
         </dict>

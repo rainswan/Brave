@@ -1,3 +1,4 @@
+local PhysicsManager = import("..scenes.PhysicsManager")
 
 local Player = class("Player", function()
     local sprite = display.newSprite("#player1-1-1.png")
@@ -5,12 +6,22 @@ local Player = class("Player", function()
 end)
 
 function Player:ctor()
+
+    self.attack = 50
+    self.blood = 500
+
+    local world = PhysicsManager:getInstance()
+    self.body = world:createBoxBody(1, self:getContentSize().width/2, self:getContentSize().height)
+--    self.body:bind(self)
+    self.body:setCollisionType(CollisionType.kCollisionTypePlayer)
+    self.body:setIsSensor(true)
+
+    self:scheduleUpdate();
+    self:addNodeEventListener(cc.NODE_ENTER_FRAME_EVENT, function() self.body:setPosition(self:getPosition()) end)
+
     -- 缓存动画数据
     self:addAnimation()
     self:addStateMachine()
-end
-function Player:addUI()
---    self.mBlood =
 end
 
 function Player:addAnimation()
@@ -19,7 +30,14 @@ function Player:addAnimation()
 
     for i = 1, #animationNames do
         local frames = display.newFrames("player1-" .. i .. "-%d.png", 1, animationFrameNum[i])
-        local animation = display.newAnimation(frames, 0.2)
+        local animation = nil
+        if animationNames[i] == "attack" then
+            animation = display.newAnimation(frames, 0.1)
+        else
+            animation = display.newAnimation(frames, 0.2)
+        end
+
+        animation:setRestoreOriginalFrame(true)
         display.setAnimationCache("player1-" .. animationNames[i], animation)
     end
 end
@@ -59,24 +77,28 @@ function Player:walkTo(pos, callback)
     return true
 end
 
-function Player:attack()
+function Player:attackEnemy()
 
     local function attackEnd()
         self:doEvent("stop")
     end
 
     local animation = display.getAnimationCache("player1-attack")
-    animation:setRestoreOriginalFrame(true)
     transition.playAnimationOnce(self, animation, false, attackEnd)
 end
 
 function Player:hit()
-    local animation = display.getAnimationCache("player1-hit")
-    animation:setRestoreOriginalFrame(true)
-    transition.playAnimationOnce(self, animation)
+
+    local function hitEnd()
+        self:doEvent("stop")
+    end
+    transition.playAnimationOnce(self, display.getAnimationCache("player1-hit"), false, hitEnd)
 end
 
 function Player:dead()
+    local world = PhysicsManager:getInstance()
+    world:removeBody(self.body, true)
+    self.body = nil
     transition.playAnimationOnce(self, display.getAnimationCache("player1-dead"))
 end
 
@@ -103,15 +125,16 @@ function Player:addStateMachine()
             -- t1:clickScreen; t2:clickEnemy; t3:beKilled; t4:stop
             {name = "clickScreen", from = {"idle", "attack"},   to = "walk" },
             {name = "clickEnemy",  from = {"idle", "walk"},  to = "attack"},
-            {name = "beKilled", from = {"idle", "walk", "attack"},  to = "dead"},
-            {name = "stop", from = {"walk", "attack"}, to = "idle"},
+            {name = "beKilled", from = {"idle", "walk", "attack", "hit"},  to = "dead"},
+            {name = "beHit", from = {"idle", "walk", "attack"}, to = "hit"},
+            {name = "stop", from = {"walk", "attack", "hit"}, to = "idle"},
         },
 
         -- 状态转变后的回调
         callbacks = {
             onidle = function (event) self:idle() end,
-            onwalk = function (event)  end,
-            onattack = function (event) self:attack()  end,
+            onattack = function (event) self:attackEnemy() end,
+            onhit = function (event) self:hit() end,
             ondead = function (event) self:dead() end
         },
     })
