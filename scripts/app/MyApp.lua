@@ -13,7 +13,7 @@ function MyApp:run()
     display.addSpriteFramesWithFile("image/role.plist", "image/role.pvr.ccz");
     display.addSpriteFramesWithFile("image/ui.plist", "image/ui.pvr.ccz");
     display.addSpriteFramesWithFile("image/effect.plist", "image/effect.pvr.ccz");
-    self:enterScene("MainScene")
+    self:enterScene("StartScene")
 end
 
 return MyApp

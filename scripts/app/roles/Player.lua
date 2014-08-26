@@ -1,7 +1,7 @@
 local PhysicsManager = import("..scenes.PhysicsManager")
 
 local Player = class("Player", function()
-    local sprite = display.newSprite("#player1-1-1.png")
+    local sprite = display.newSprite("#player1-1-1.png", SpriteEx)
     return sprite
 end)
 
@@ -139,6 +139,12 @@ function Player:addStateMachine()
         },
     })
 
+end
+
+function Player:onExit()
+    self.fsm_:doEventForce("stop")
+    self:removeNodeEventListenersByEvent(cc.NODE_TOUCH_EVENT)
+    self:removeNodeEventListenersByEvent(cc.NODE_ENTER_FRAME_EVENT)
 end
 
 return Player

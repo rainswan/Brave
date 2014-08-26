@@ -102,6 +102,7 @@ function Enemy1:dead()
 
     local function remove()
         self:removeFromParentAndCleanup()
+        CCNotificationCenter:sharedNotificationCenter():postNotification("ENEMY_DEAD", self)
     end
 
     transition.playAnimationOnce(self, display.getAnimationCache("enemy1-dead"), true, remove)
@@ -144,6 +145,11 @@ function Enemy1:addStateMachine()
         },
     })
 
+end
+
+function Enemy1:onExit()
+    self:removeNodeEventListenersByEvent(cc.NODE_TOUCH_EVENT)
+    self:removeNodeEventListenersByEvent(cc.NODE_ENTER_FRAME_EVENT)
 end
 
 return Enemy1

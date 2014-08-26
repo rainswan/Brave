@@ -12,7 +12,7 @@ function Background:ctor()
     self:addChild(self.sprite)
 end
 
-function Background:move(direct)
+function Background:move(direct, withSprite)
     if self.isMove then
         return
     end
@@ -28,6 +28,11 @@ function Background:move(direct)
                                 CCCallFunc:create(function () self:moveEnd() end)})
     transition.moveBy(self.sprite, moveArgs)
     transition.execute(self.sprite2, seq)
+
+    if withSprite then
+        transition.moveBy(withSprite, moveArgs)
+    end
+
     self.isMove = true
 end
 
@@ -39,6 +44,8 @@ function Background:moveEnd()
     else
         self.sprite2:setPosition(display.cx + display.width, display.cy)
     end
+
+    CCNotificationCenter:sharedNotificationCenter():postNotification("BACKGROUND_MOVE_END")
 end
 
 return Background

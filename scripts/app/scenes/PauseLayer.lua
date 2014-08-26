@@ -42,7 +42,7 @@ end
 
 function PauseLayer:addTouch()
     local function onTouch(name, x, y)
-
+        print("PauseLayer:addTouch")
     end
 
     self:addNodeEventListener(cc.NODE_TOUCH_EVENT, function(event)
@@ -58,7 +58,10 @@ function PauseLayer:resume()
 end
 
 function PauseLayer:home()
-
+    display.resume()
+    self:removeNodeEventListenersByEvent(cc.NODE_TOUCH_EVENT)
+    self:removeFromParentAndCleanup(true)
+    display.replaceScene(require("app.scenes.StartScene").new())
 end
 
 return PauseLayer
